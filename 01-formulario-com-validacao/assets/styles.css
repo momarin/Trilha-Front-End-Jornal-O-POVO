@@ -1,0 +1,264 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: #ff7978;
+  background-image: url("../intro-component-with-signup-form-master/images/bg-intro-desktop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* um erro de iniciante: qualquer coisa colocada no global é herdada por todos os outros elementos. Sendo assim, ao colocar o background no global, ocorre uma repetição dele em todos os elementos. no caso do text-content, ficou bem visível essa repetição. Conserta-se colocando-o no body. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+   margin: 0 21px;
+}
+
+/* TEXT CONTENT */
+.text-content {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  margin: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 110px;
+}
+
+.text-content h1 {
+  margin-bottom: 10px;
+  font-size: 38px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.text-content p {
+  margin-bottom: 50px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* TRY BUTTON */
+.btn-try {
+  padding: 12px;
+  background: #5d54a3 0% 0% padding-box;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px #fe5756;
+  opacity: 1;
+  color: #fff;
+  border: none;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 15px 12px 15px 12px;
+  font-size: 14px;
+}
+
+.btn-try:hover {
+  opacity: 0.9;
+}
+
+.btn-try b {
+  background: #5d54a3;
+  font-weight: 600;
+}
+
+/* FORM */
+.registration-form {
+  background: #fff;
+  background-repeat: no-repeat;
+  box-shadow: 5px 8px 0px #fb010147;
+  border-radius: 15px;
+  opacity: 1;
+  padding: 40px; /* Adiciona um espaçamento interno */
+  width: 100%; /* Garante que o formulário ocupe a largura disponível */
+  max-width: 400px; /* Define uma largura máxima para o formulário */
+  margin: 0 auto; /* Centraliza o formulário horizontalmente */
+  display: block;
+  flex: 1;
+  box-sizing: border-box;
+  margin-bottom: 84px;
+}
+
+.input-group {
+  position: relative; /* Permite posicionar a mensagem de erro dentro do grupo */
+  /* margin-bottom: 50px; */
+}
+
+.registration-form input {
+  background: #fff;
+  background-repeat: no repeat;
+  border: 1px solid #3a3a3a;
+  border-radius: 5px;
+  opacity: 1;
+  width: 100%;
+  padding: 14px 15px 13px 15px;
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.registration-form input::placeholder {
+  color: #9d9d9d;
+}
+
+/* ERROR MESSAGES */
+.input-error {
+  border-color: #ff2121 !important;
+}
+
+.error-message {
+  color: #fe514f;
+  font-size: 12px;
+  display: none;
+  justify-content: flex-end; /* alinhando conteudo à direita*/
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.error-message span {
+    display: flex; /* Alinha o texto e o ícone horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 16px; /* Altura padrão (mobile) */
+    margin-top: 8px; /* Margin-top padrão (mobile) */
+  }
+  
+
+.error-message i {
+  margin: 0.313rem; /* espaçamento entre txt e icon*/
+  font-size: 20px;
+  vertical-align: middle;
+  color: #FF7978;
+}
+
+/* BTN REGISTRATION */
+.btn-regist {
+  background: #77e2b4;
+  color: #fff;
+  padding: 14px 23px 13px 24px; /* top, right, bottom, left*/
+  border: none;
+  /* margin: 0 auto; */
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px #6acca1;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* TERMS AND SERVICES */
+.terms-and-services {
+  background: #fff;
+  font-size: 10px;
+  padding-inline: 36.5px;
+  text-align: center;
+  justify-content: center;
+  color: #9d9d9d;
+}
+
+.terms-and-services a {
+  background: #fff;
+  text-align: center;
+  color: #ff7978;
+  text-decoration: none;
+}
+/* ---------------------------------------------------------------------- */
+/* RESPONSIVE - Media Query */
+@media (min-width: 1200px) {
+  body {
+    padding: 75px 125px; /*75 eixo x, 125 eixo y*/
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-content {
+    display: block;
+    flex: 1;
+    text-align: start;
+    max-width: 400px;
+    justify-content: start;
+    margin-top: 50px;
+    margin-right: 125px;
+  }
+
+  .text-content h1 {
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 15px;
+    width: 400px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .btn-try {
+    margin-bottom: 35px;
+    height: 50px;
+    max-width: none;
+    width: 100%;
+  }
+
+  .registration-form {
+    flex: 1;
+    margin: 0;
+    max-width: none; /* sobrescrevi caracteristica do geral para @media*/
+    width: 505px;
+    height: 565px;
+    box-sizing: border-box;
+    padding: 40px;
+  }
+
+  /* .error-message {
+    margin-top: 7px;
+  } */
+
+  .error-message span {
+    height: 20px; /* Altura no desktop */
+    margin-top: 4px; /* Margin-top no desktop */
+  }
+
+  .error-message i {
+    font-size: 20px; /* Tamanho do ícone no desktop */
+  }
+
+  .registration-form input {
+    height: 50px;
+  }
+
+  .terms-and-services {
+    font-size: 12px;
+  }
+}
