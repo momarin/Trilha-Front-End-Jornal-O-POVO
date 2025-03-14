@@ -1,3 +1,5 @@
 # Formulário de cadastro com validação
 
 - Uso de JavaScript para adição de mensagem de erro ao se tentar aplicar o formulário vazio;
+- Responsividade Mobile e Desktop (de acordo com design modelo);
+- Uso de breakpoints do bootstrap@5.3.3.
